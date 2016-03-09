@@ -144,6 +144,7 @@ a {
 .global-wrap .gw-left dl dd a {
   color: #2e3031;
   line-height: 20px;
+  cursor: pointer;
 }
 .global-wrap .gw-left dl dd a .icon-btn {
   width: 17px;
@@ -188,16 +189,22 @@ a {
   height: 14px;
   padding: 6px 10px ;
   border: 1px solid #d2d3d3;
+  cursor: pointer;
+  position: relative;
 }
 .global-wrap .gw-right .gw-tit .gw-dropdown .dropdown-onoff span {
   font-size: 12px;
   line-height: 14px;
   color: #797979;
 }
+.global-wrap .gw-right .gw-tit .gw-dropdown .dropdown-onoff .icon-dropdown {
+  position: absolute;
+  right: 20px;
+}
 .global-wrap .gw-right .gw-tit .gw-dropdown .dropdown-onoff .icon-dropdown:after {
   position: absolute;
-  top: -3px;
-  right: -73px;
+  top: 5px;
+  left: 0px;
   width: 5px;
   height: 3px;
   background-image: url("../img/icon-dropdown.png");

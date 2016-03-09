@@ -48,13 +48,13 @@
 				时间
 			</dt>
 			<dd>
-				<a href="#" class="active"><i class="icon icon-btn"></i>5-10分钟&nbsp;<span>[18]</span></a>
+				<a class="active"><i class="icon icon-btn"></i>5-10分钟&nbsp;<span>[18]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>10-30分钟&nbsp;<span>[10]</span></a>
+				<a ><i class="icon icon-btn"></i>10-30分钟&nbsp;<span>[10]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>30分钟以上&nbsp;<span>[3]</span></a>
+				<a ><i class="icon icon-btn"></i>30分钟以上&nbsp;<span>[3]</span></a>
 			</dd>
 		</dl>
 		<dl>
@@ -62,13 +62,13 @@
 				种类
 			</dt>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>菜品&nbsp;<span>[20]</span></a>
+				<a ><i class="icon icon-btn"></i>菜品&nbsp;<span>[20]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>汤品&nbsp;<span>[5]</span></a>
+				<a ><i class="icon icon-btn"></i>汤品&nbsp;<span>[5]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>主食<&nbsp;<span>[5]</span></a>
+				<a ><i class="icon icon-btn"></i>主食<&nbsp;<span>[5]</span></a>
 			</dd>
 		</dl>
 		<dl>
@@ -76,13 +76,13 @@
 				荤素
 			</dt>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>肉类&nbsp;<span>[20]</span></a>
+				<a ><i class="icon icon-btn"></i>肉类&nbsp;<span>[20]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>海鲜&nbsp;<span>[7]</span></a>
+				<a ><i class="icon icon-btn"></i>海鲜&nbsp;<span>[7]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>素食&nbsp;<span>[4]</span></a>
+				<a ><i class="icon icon-btn"></i>素食&nbsp;<span>[4]</span></a>
 			</dd>
 		</dl>
 		<dl>
@@ -90,13 +90,13 @@
 				菜系
 			</dt>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>中餐&nbsp;<span>[15]</span></a>
+				<a ><i class="icon icon-btn"></i>中餐&nbsp;<span>[15]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>亚洲&nbsp;<span>[8]</span></a>
+				<a ><i class="icon icon-btn"></i>亚洲&nbsp;<span>[8]</span></a>
 			</dd>
 			<dd>
-				<a href="#"><i class="icon icon-btn"></i>西餐&nbsp;<span>[6]</span></a>
+				<a ><i class="icon icon-btn"></i>西餐&nbsp;<span>[6]</span></a>
 			</dd>
 		</dl>
 	</div>
@@ -340,8 +340,15 @@
 	</div>
 </div>
 <script src="../jquery/1.12.1/jquery-1.12.1.min.js"></script>
+<script src="../src/js/menu.js"></script>
 <script>
 $(function(){
+    var pulldown = $(".gw-dropdown").each(function(){
+        return new Pulldown($(this),".dropdown-onoff",".dropdown-menu");
+    });
+    var activeBtn = $(".gw-left > dl").each(function(){
+        return new ActiveBtn($(this));
+    });
 });
 
 </script>
