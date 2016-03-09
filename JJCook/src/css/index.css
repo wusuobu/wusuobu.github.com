@@ -107,6 +107,9 @@ a {
   color: #202223;
   font-size: 14px;
 }
+.global-header .gh-head .gh-nav .active {
+  color: #52af00;
+}
 .global-header .gh-head .gh-nav .user-reg {
   margin-right: 0;
 }

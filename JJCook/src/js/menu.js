@@ -41,3 +41,24 @@ ActiveBtn.prototype={
         })
     }
 };
+
+function  HoverChange(elemObj,imgOBJ,hoverObj){
+    this.elemObj=$(elemObj);
+    this.imgObj=this.elemObj.find(imgOBJ)
+    this.hoverObj=this.elemObj.find(hoverObj)
+    this.init();
+}
+
+HoverChange.prototype={
+    constructor:HoverChange,
+
+    init:function(){
+        var $imgObj_img = this.imgObj.find("img");
+        var $hoverObj_tag = this.hoverObj.find("a");
+
+        $hoverObj_tag.on("mouseenter",function(){
+            var img = $(this).data("img");
+            $imgObj_img.attr("src",img);
+        })
+    }
+}
