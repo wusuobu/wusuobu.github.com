@@ -174,20 +174,6 @@ a{
                     }
                 }
 
-                .align{
-                    width: 600px;
-                    position: absolute;
-                    bottom: 10px;
-                    text-align: center;
-                    top:auto;
-                    left: auto;
-
-                    a{
-                        display: inline-block;
-                        cursor: pointer;
-                    }
-                }
-
                 .gs-nav{
                     display: none;
                     width: 600px;
@@ -461,6 +447,7 @@ a{
                     padding-bottom: 50px;
 
                     ul{
+                        width: 2100px;
                         position: absolute;
                         left: 0px;
 
@@ -813,9 +800,14 @@ a{
         width: 1000px;
         margin: 0 auto;
         position: relative;
-        background-image: url("../img/icon-menifesto-4.png");
-        background-repeat: no-repeat;
-        background-position: 0 36px;
+
+
+        .manifesto-img{
+            float: left;
+            margin-top: 25px;
+            margin-left: -25px;
+            width: 337px;
+        }
 
         .manifesto-bag{
             width: 675px;
@@ -965,6 +957,32 @@ a{
 
         span {
             margin: 0 40px;
+        }
+    }
+}
+@media screen and (max-width:1000px){
+    body{
+        .global-wrap{
+            .content{
+                .goods{
+                    .goods-show{
+
+                        .gs-small-img{
+                            width: 600px;
+                            position: absolute;
+                            bottom: 10px;
+                            text-align: center;
+                            top:auto;
+                            left: auto;
+
+                            a{
+                                display: inline-block;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -341,20 +341,5 @@
 </div>
 <script src="../jquery/1.12.1/jquery-1.12.1.min.js"></script>
 <script src="../src/js/menu.js"></script>
-<script>
-$(function(){
-    var pulldown = $(".gw-dropdown").each(function(){
-        return new Pulldown($(this),".dropdown-onoff",".dropdown-menu");
-    });
-    var activeBtn = $(".gw-left > dl").each(function(){
-        return new ActiveBtn($(this));
-    });
-
-	var hoverchange = $(".box").each(function(){
-		return new HoverChange($(this),".bix-img",".small-img")
-	})
-});
-
-</script>
 </body>
 </html>

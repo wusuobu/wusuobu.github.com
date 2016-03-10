@@ -10,6 +10,9 @@ $(function(){
     var $points=  $("input[name='points']");
     var num = 1;
 
+    var $close = $(".icon-close");
+    var $detail_hide = $(".detail-hide");
+
     $(window).on('resize', transfer).trigger('resize');
 
     $add_btn.on("click",function(){
@@ -27,8 +30,21 @@ $(function(){
         }
     });
 
+    $close.on("click",function(){
+        var _index = $(this).data("index");
+        if(!_index){
+            $detail_hide.show();
+            $close.data("index",1).text("收起详情");
+        }else{
+            $detail_hide.hide();
+            $close.data("index",0).text("展开详情");
+        }
+
+    });
+
+
     function transfer(){
-        if($(document).width()<=1000){
+        if($(document).width()==1000){
             $gs_nav.hide();
             $gs_small_img.addClass("align");
         }else{
@@ -38,8 +54,6 @@ $(function(){
     }
 
 });
-
-
 
 function Change(elemObj,navObj,shrinkObj){
     this.elemObj=$(elemObj);

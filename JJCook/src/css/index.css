@@ -168,6 +168,9 @@ a {
   background-image: url("../img/next.png");
   right: 5%;
 }
+.global-header .arrow .hide {
+  display: none;
+}
 .global-header .gh-trait {
   width: 1000px;
   height: 58px;
@@ -262,7 +265,7 @@ a {
 .global-wrap .week .week-bd dl dd a:hover .dt-txt .dd-menu,
 .global-wrap .week .week-bd dl dt a:hover .dd-txt .dd-menu,
 .global-wrap .week .week-bd dl dd a:hover .dd-txt .dd-menu {
-  display: none;
+  opacity: 0;
 }
 .global-wrap .week .week-bd dl dt a:hover .dt-txt .dt-shade,
 .global-wrap .week .week-bd dl dd a:hover .dt-txt .dt-shade,
@@ -272,7 +275,7 @@ a {
 .global-wrap .week .week-bd dl dd a:hover .dt-txt .dd-shade,
 .global-wrap .week .week-bd dl dt a:hover .dd-txt .dd-shade,
 .global-wrap .week .week-bd dl dd a:hover .dd-txt .dd-shade {
-  display: block;
+  opacity: .4;
 }
 .global-wrap .week .week-bd dl dt a:hover .dt-txt .dt-hover,
 .global-wrap .week .week-bd dl dd a:hover .dt-txt .dt-hover,
@@ -282,7 +285,7 @@ a {
 .global-wrap .week .week-bd dl dd a:hover .dt-txt .dd-hover,
 .global-wrap .week .week-bd dl dt a:hover .dd-txt .dd-hover,
 .global-wrap .week .week-bd dl dd a:hover .dd-txt .dd-hover {
-  display: block;
+  opacity: 1;
 }
 .global-wrap .week .week-bd dl dt a .dt-txt .dt-menu,
 .global-wrap .week .week-bd dl dd a .dt-txt .dt-menu,
@@ -302,6 +305,8 @@ a {
   z-index: 1;
   padding: 22px 0 0 21px;
   font-size: 14px;
+  opacity: 1;
+  transition: opacity 400ms;
 }
 .global-wrap .week .week-bd dl dt a .dt-txt .dt-menu h3,
 .global-wrap .week .week-bd dl dd a .dt-txt .dt-menu h3,
@@ -366,10 +371,9 @@ a {
   bottom: 0;
   left: 0;
   background: #000;
-  opacity: .4;
-  filter: alpha(opacity=40);
+  opacity: 0;
   z-index: 0;
-  display: none;
+  transition: opacity 400ms;
 }
 .global-wrap .week .week-bd dl dt a .dt-txt .dt-hover,
 .global-wrap .week .week-bd dl dd a .dt-txt .dt-hover,
@@ -387,7 +391,8 @@ a {
   z-index: 1;
   top: 0;
   margin-top: 86px;
-  display: none;
+  opacity: 0;
+  transition: opacity 400ms;
 }
 .global-wrap .week .week-bd dl dt a .dt-txt .dt-hover h3,
 .global-wrap .week .week-bd dl dd a .dt-txt .dt-hover h3,
@@ -642,6 +647,7 @@ a {
   z-index: 2;
   display: block;
   text-align: center;
+  overflow: hidden;
 }
 .global-wrap .promise ul li .promise-shade .ps-background {
   width: 320px;
@@ -652,13 +658,15 @@ a {
   bottom: 0;
   opacity: .6;
   filter: alpha(opacity=60);
+  transition: height .2s;
 }
 .global-wrap .promise ul li .promise-shade .ps-txt {
   width: 320px;
   z-index: 2;
   position: absolute;
-  bottom: 16px;
+  bottom: -20px;
   color: #202223;
+  transition: bottom .25s;
 }
 .global-wrap .promise ul li .promise-shade .ps-txt p {
   font-size: 14px;
@@ -684,10 +692,14 @@ a {
   color: #202223;
   text-decoration: underline;
   line-height: 24px;
-  display: none;
+  display: block;
+  margin-top: 10px;
 }
 .global-wrap .promise ul li:hover .ps-background {
   height: 115px;
+}
+.global-wrap .promise ul li:hover .ps-txt {
+  bottom: 10px;
 }
 .global-wrap .promise ul li:hover .ps-txt .more {
   display: block;

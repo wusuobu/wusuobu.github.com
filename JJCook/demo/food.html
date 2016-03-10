@@ -349,48 +349,5 @@
 </div>
 <script src="../jquery/1.12.1/jquery-1.12.1.min.js"></script>
 <script src="../src/js/food.js"></script>
-<script>
-$(function(){
-	var change = new Change(".gs-img",".gs-nav",".gs-small-img");
-	var rotation = new Rotation(".device-list",".device-list ul",".arrow");
-
-	var $gs_nav = $(".gs-nav");
-	var $gs_small_img = $(".gs-small-img");
-
-	var $add_btn = $(".add-btn");
-	var $sub_btn= $(".sub-btn");
-	var $points=  $("input[name='points']");
-	var num = 1;
-
-	$(window).on('resize', transfer).trigger('resize');
-
-	$add_btn.on("click",function(){
-		 num = $points.val();
-		if( num < $points.data("max")){
-			num++;
-			$points.val(num);
-		}
-	});
-	$sub_btn.on("click",function(){
-		num = $points.val();
-		if( num > $points.data("min")){
-			num--;
-			$points.val(num);
-		}
-	});
-
-	function transfer(){
-		if($(document).width()<=1000){
-			$gs_nav.hide();
-			$gs_small_img.addClass("align");
-		}else{
-			$gs_nav.show();
-			$gs_small_img.removeClass("align");
-		}
-	}
-
-});
-
-</script>
 </body>
 </html>

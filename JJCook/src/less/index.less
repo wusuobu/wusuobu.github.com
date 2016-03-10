@@ -181,6 +181,10 @@ a{
             background-image: url("../img/next.png");
             right: 5%;
         }
+
+        .hide{
+            display: none;
+        }
     }
 
     .gh-trait{
@@ -293,15 +297,15 @@ a{
                             .dt-txt,.dd-txt{
 
                                 .dt-menu,.dd-menu{
-                                    display: none;
+                                    opacity: 0;
                                 }
 
                                 .dt-shade,.dd-shade{
-                                    display: block;
+                                    opacity: .4;
                                 }
 
                                 .dt-hover,.dd-hover{
-                                    display: block;
+                                    opacity: 1;
                                 }
                             }
                         }
@@ -319,6 +323,8 @@ a{
                                 z-index: 1;
                                 padding: 22px 0 0 21px;
                                 font-size: 14px;
+                                opacity: 1;
+                                transition:opacity 400ms;
 
                                 h3{
                                     font-size: 18px;
@@ -356,10 +362,9 @@ a{
                                 bottom: 0;
                                 left: 0;
                                 background: #000;
-                                opacity: .4;
-                                filter: alpha(opacity=40);
+                                opacity: 0;
                                 z-index: 0;
-                                display: none;
+                                transition:opacity 400ms;
                             }
 
                             .dt-hover,.dd-hover{
@@ -371,7 +376,8 @@ a{
                                 z-index: 1;
                                 top: 0;
                                 margin-top: 86px;
-                                display: none;
+                                opacity: 0;
+                                transition:opacity 400ms;
 
                                 h3 {
                                     font-size: 30px;
@@ -587,6 +593,7 @@ a{
                     z-index: 2;
                     display: block;
                     text-align: center;
+                    overflow: hidden;
 
                     .ps-background{
                         width: 320px;
@@ -597,14 +604,16 @@ a{
                         bottom: 0;
                         opacity: .6;
                         filter: alpha(opacity=60);
+                        transition:height .2s;
                     }
 
                     .ps-txt{
                         width: 320px;
                         z-index: 2;
                         position: absolute;
-                        bottom: 16px;
+                        bottom: -20px;
                         color: #202223;
+                        transition:bottom .25s;
 
                         p {
                             font-size: 14px;
@@ -633,7 +642,8 @@ a{
                             color: #202223;
                             text-decoration: underline;
                             line-height: 24px;
-                            display: none;
+                            display: block;
+                            margin-top: 10px;
                         }
                     }
                 }
@@ -645,7 +655,7 @@ a{
                     }
 
                     .ps-txt{
-
+                        bottom: 10px;
                         .more{
                             display: block;
                         }

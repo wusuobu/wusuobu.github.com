@@ -100,7 +100,7 @@
 					<a class="next" data-type="right"></a>
 				</div>
 				<div class="device-list">
-					<ul style="width: 2100px;">
+					<ul>
 						<li>
 							<div class="device-box">
 								<div class="bix-img">
@@ -291,9 +291,12 @@
 			</ul>
 		</div>
 	</div>
-	<div class="banner" style="width: 100%;">
+	<div class="banner">
 	</div>
 	<div class="manifesto clearfix">
+        <div class="manifesto-img">
+            <img src="../src/img/icon-menifesto-4.png" alt="">
+        </div>
 		<div class="manifesto-bag">
 			<h2>Manifesto</h2>
 			<ul class="manifesto-list">
@@ -337,65 +340,6 @@
 	</div>
 </div>
 <script src="../jquery/1.12.1/jquery-1.12.1.min.js"></script>
-<script src="../src/js/food.js"></script>
-<script>
-	$(function(){
-		var change = new Change(".gs-img",".gs-nav",".gs-small-img");
-		var rotation = new Rotation(".device-list",".device-list ul",".arrow");
-
-		var $gs_nav = $(".gs-nav");
-		var $gs_small_img = $(".gs-small-img");
-
-        var $add_btn = $(".add-btn");
-        var $sub_btn= $(".sub-btn");
-        var $points=  $("input[name='points']");
-        var num = 1;
-
-		var $close = $(".icon-close");
-		var $detail_hide = $(".detail-hide");
-
-		$(window).on('resize', transfer).trigger('resize');
-
-        $add_btn.on("click",function(){
-            num = $points.val();
-            if( num < $points.data("max")){
-                num++;
-                $points.val(num);
-            }
-        });
-        $sub_btn.on("click",function(){
-            num = $points.val();
-            if( num > $points.data("min")){
-                num--;
-                $points.val(num);
-            }
-        });
-
-        $close.on("click",function(){
-			var _index = $(this).data("index");
-			if(!_index){
-				$detail_hide.show();
-				$close.data("index",1)
-			}else{
-				$detail_hide.hide();
-				$close.data("index",0)
-			}
-
-		});
-
-
-		function transfer(){
-			if($(document).width()==1000){
-				$gs_nav.hide();
-				$gs_small_img.addClass("align");
-			}else{
-				$gs_nav.show();
-				$gs_small_img.removeClass("align");
-			}
-		}
-
-	});
-
-</script>
+<script src="../src/js/combo.js"></script>
 </body>
 </html>

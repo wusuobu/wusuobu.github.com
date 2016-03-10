@@ -1,3 +1,10 @@
+$(function(){
+    var rotate = new Rotate(".gh-bg ul",".arrow");
+    var change = new Change(".comment-txt",".comment-nav");
+});
+
+
+
 function Rotate(elemObj, arrowsObj){
     this.elemObj=$(elemObj);
     this.arrowsObj=$(arrowsObj);
@@ -29,10 +36,15 @@ Rotate.prototype ={
                     'opacity':1
                 },700);
             index++;
+            $prev.removeClass("hide");
+            if(index>=$elemObj_tag.length){
+                $next.addClass("hide");
+            }
         });
 
         $prev.on("click", function(){
             if(index <= 1){
+                $(this).addClass("hide");
                 return false;
             }
             index--;
@@ -47,6 +59,10 @@ Rotate.prototype ={
                 .stop().animate({
                     'opacity':1
                 },700);
+            $next.removeClass("hide");
+            if(index<=1){
+                $prev.addClass("hide");
+            }
         });
     }
 };
