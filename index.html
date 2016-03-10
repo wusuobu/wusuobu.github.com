@@ -16,8 +16,6 @@
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
   
     <link rel="icon" href="/favicon.png">
   
@@ -70,7 +68,7 @@
 						<li>Tags</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -86,6 +84,8 @@
 							<li><a href="/">主页</a></li>
 				        
 							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="/JJCook/demo/index.html">作品</a></li>
 				        
 						</ul>
 					</nav>
@@ -151,6 +151,8 @@
 		        
 					<li><a href="/archives">所有文章</a></li>
 		        
+					<li><a href="/JJCook/demo/index.html">作品</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -199,9 +201,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="用更好的方式-享受料理"><a href="#用更好的方式-享受料理" class="headerlink" title="用更好的方式 享受料理"></a><a href="JJCook/demo/index.html">用更好的方式 享受料理</a></h1><hr>
-<p><a href="JJCook/demo/index.html"><img src="https://raw.githubusercontent.com/wusuobu/wusuobu.github.com/master/image/screenshot.png" alt=""></a></p>
-
+        <h1 id="用更好的方式-享受料理"><a href="#用更好的方式-享受料理" class="headerlink" title="用更好的方式 享受料理"></a><a href="http://wusuobu.github.io/JJCook/demo/index.html" target="_blank" rel="external">用更好的方式 享受料理</a></h1><hr>
+<p><a href="http://wusuobu.github.io/JJCook/demo/index.html" target="_blank" rel="external"><img src="https://raw.githubusercontent.com/wusuobu/wusuobu.github.com/master/image/screenshot.png" alt=""></a></p>
+<h3 id="链接-page-1-page-2-page-3-page-4"><a href="#链接-page-1-page-2-page-3-page-4" class="headerlink" title="链接: page-1 page-2  page-3  page-4"></a>链接: <a href="http://wusuobu.github.io/JJCook/demo/index.html" target="_blank" rel="external">page-1</a> <a href="http://wusuobu.github.io/JJCook/demo/food.html" target="_blank" rel="external">page-2</a>  <a href="http://wusuobu.github.io/JJCook/demo/combo.html" target="_blank" rel="external">page-3</a>  <a href="http://wusuobu.github.io/JJCook/demo/menu.html" target="_blank" rel="external">page-4</a></h3>
       
     </div>
     
@@ -254,67 +256,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML PUBLIC <span class="string">"-//W3C//DTD HTML 4.01//EN"</span> <span class="string">"http://www.w3.org/TR/html4/strict.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;jQuery中的DOM操作&lt;/title&gt;</span><br><span class="line">  &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span> src=<span class="string">"jquery-1.3.2.js"</span>&gt;&lt;/script&gt;      //js文件路径改成自己的</span><br><span class="line">     &lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">      $(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">         //全选，反选</span><br><span class="line">           $(<span class="string">"button:eq(0)"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;                  </span><br><span class="line">          $(<span class="string">":Checkbox"</span>).attr(<span class="string">"checked"</span>, <span class="literal">true</span>);              //<span class="string">":checked"</span>匹配所有的复选框</span><br><span class="line">         &#125;);</span><br><span class="line">    //checked是设置选中状态。如果为<span class="literal">true</span>则是选中fo否则<span class="literal">false</span>为不选中</span><br><span class="line">          $(<span class="string">"Button:eq(1)"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">          $(<span class="string">":Checkbox"</span>).attr(<span class="string">"checked"</span>,<span class="literal">false</span>);</span><br><span class="line">          &#125;);</span><br><span class="line">         $(<span class="string">"Button:eq(2)"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">         $(<span class="string">":Checkbox"</span>).each(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">         $(this).attr(<span class="string">"checked"</span>,!$(this).attr(<span class="string">"checked"</span>)); </span><br><span class="line">   //断复选框的状态：如果选中则取反</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">   &#125;);</span><br><span class="line">    </span><br><span class="line">     &lt;/script&gt;</span><br><span class="line">  &lt;style <span class="built_in">type</span>=<span class="string">"text/css"</span>&gt;</span><br><span class="line">   <span class="comment">#apple&#123;color:#F00;&#125;</span></span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"checkbox1"</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"checkbox1"</span>&gt;TEARS AND RAIN&lt;/label&gt;&lt;br&gt;</span><br><span class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"checkbox2"</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"checkbox2"</span>&gt;TEARS AND RAIN&lt;/label&gt;&lt;br&gt;</span><br><span class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"checkbox3"</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"checkbox3"</span>&gt;TEARS AND RAIN&lt;/label&gt;&lt;br&gt;</span><br><span class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"checkbox4"</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"checkbox4"</span>&gt;TEARS AND RAIN&lt;/label&gt;&lt;br&gt;</span><br><span class="line">  &lt;input <span class="built_in">type</span>=<span class="string">"checkbox"</span> id=<span class="string">"checkbox5"</span>&gt;&lt;label <span class="keyword">for</span>=<span class="string">"checkbox5"</span>&gt;TEARS AND RAIN&lt;/label&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">  &lt;button&gt;全选&lt;/button&gt;&lt;button&gt;全不选&lt;/button&gt;&lt;button&gt;全反选&lt;/button&gt;</span><br><span class="line"> &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/10/hello-world/" class="article-date">
-  	<time datetime="2016-03-10T04:20:39.280Z" itemprop="datePublished">2016-03-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/10/hello-world/">Hello World123123123123</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
       
     </div>
     
