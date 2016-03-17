@@ -76,6 +76,7 @@ Calendar.prototype = {
 			}else{
 				that.showDateMonth--;
 			}
+			that.showDateMonth = parseInt(that.showDateMonth)>9?that.showDateMonth.toString():'0'+that.showDateMonth;
 			that.calendarObj.find('.calendar-tit-txt').text(that.showDateYear+'年'+that.showDateMonth+'月');
 			that.setCalenderBodyDay(that.showDateYear,that.showDateMonth);
 			that.calendarBody.find('td').removeClass('calendar-active');
@@ -91,6 +92,7 @@ Calendar.prototype = {
 			}else{
 				that.showDateMonth++;
 			}
+			that.showDateMonth = parseInt(that.showDateMonth)>9?that.showDateMonth.toString():'0'+that.showDateMonth;
 			that.calendarObj.find('.calendar-tit-txt').text(that.showDateYear+'年'+that.showDateMonth+'月');
 			that.setCalenderBodyDay(that.showDateYear,that.showDateMonth);
 			that.calendarBody.find('td').removeClass('calendar-active');
@@ -165,7 +167,6 @@ Calendar.prototype = {
 		var that =this;
 		var seconds = this.getNowTimeSeconds();
 		this.calendarObj.find('.calendar-time-second').text(seconds); 
-		console.log(seconds == '00');
 		if(seconds == '00'){
 			var minutes = this.getNowTimeMinutes();
 			this.calendarObj.find('.calendar-time-minute').text(minutes);
