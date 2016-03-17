@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+	<!--
+    <link rel="dns-prefetch" href="//">
+    <link rel="dns-prefetch" href="//">
+	-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+	<title>calculator</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="" />
+<style>
+body{
+	font-family:"Microsoft YaHei";
+}
+.calculator{
+	width:186px;
+	height:227px;
+	background:url("calculator-1.png");
+	margin:0 auto;
+	padding:37px 21px 0 21px;
+}
+.output{
+	height:46px;
+	width:186px;
+	text-align:right;
+	background-color:#e5effb;
+	font-weight:700;
+}
+.output-style{
+	height:18px;
+	font-size:16px;
+	line-height:18px;
+	overflow:hidden;
+	white-space:nowrap;
+	padding:0;
+	margin:0;
+	border:none;
+	background:none;	
+	text-align:right;
+	width:186px;
+}
+.output-result{
+	height:28px;
+	font-size:18px;
+	line-height:28px;
+	overflow:hidden;
+	white-space:nowrap;	
+	font-weight:400;
+	
+}
+.import{
+	margin-top:6px;
+	margin-left:-2px;
+	position:relative;
+}
+.import:after{
+	clear: both;
+    content: "";
+    display: table;
+}
+.button{
+	width:34px;
+	height:27px;
+	border:1px solid #8797aa;
+	border-radius:2px;
+	padding:0;
+	margin:0 5px 5px 0;
+	float:left;
+}
+
+.zero{
+	width:73px;
+}
+.result{
+	height:59px;
+	position:absolute;
+	top:96px;
+}
+</style>
+</head>
+<body>
+<div id="calculator" class="calculator">
+	<div class="output">
+		<input type="text" class="output-style" value="" r1eadonly=""/>
+		<div class="output-result">0</div>
+	</div>
+	<div class="import">
+		<input type="button" class="button"  data-number="delete" value="清除" />
+		<input type="button" class="button"  data-number="ce" value="ce" />
+		<input type="button" class="button"  data-number="c" value="c" />
+		<input type="button" class="button"  data-number="minus" value="正负" />
+		
+		<input type="button" class="button"  data-number="7" value="7" />
+		<input type="button" class="button"  data-number="8" value="8" />
+		<input type="button" class="button"  data-number="9" value="9" />
+		<input type="button" class="button"  data-number="/" value="/" />
+		
+		<input type="button" class="button"  data-number="4" value="4" />
+		<input type="button" class="button"  data-number="5" value="5" />
+		<input type="button" class="button"  data-number="6" value="6" />
+		<input type="button" class="button"  data-number="*" value="*" />
+	
+		
+		<input type="button" class="button"  data-number="1" value="1" />
+		<input type="button" class="button"  data-number="2" value="2" />
+		<input type="button" class="button"  data-number="3" value="3" />
+		<input type="button" class="button"  data-number="-" value="-" />
+		
+		
+		<input type="button" class="button zero"  data-number="0" value="0" />
+		<input type="button" class="button"  data-number="." value="." />
+		<input type="button" class="button"  data-number="+" value="+" />		
+		<input type="button" class="button result"  data-number="=" value="=" />
+			
+	</div>
+	
+	
+</div>
+
+<script src="jquery-1.11.3.js" type="text/javascript"></script>
+<script src="calculator.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+	var calculator = new Calculator("#calculator",".button",".output-result",".output-style");
+	var calculator2 = new Calculator("#calculator2",".button",".output-result",".output-style");
+	console.log(Calculator);
+});
+</script>
+</body>
+</html>
