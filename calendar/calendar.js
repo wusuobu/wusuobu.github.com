@@ -20,28 +20,6 @@ Calendar.prototype = {
 		//显示年月
 		this.showDateYear = this.nowDate.getFullYear();
 		this.showDateMonth = this.nowDate.getMonth()+1;
-		
-		
-		
-		//this.getNowTimeHours =  this.nowDate.getHours()>9?this.nowDate.getHours().toString():'0'+this.nowDate.getHours();
-		//this.getNowTimeMinutes =  this.nowDate.getMinutes()>9?this.nowDate.getMinutes().toString():'0'+this.nowDate.getMinutes();
-		//this.getNowTimeSeconds =  this.nowDate.getSeconds()>9?this.nowDate.getSeconds().toString():'0'+this.nowDate.getSeconds();
-		/*
-		//创建时间日期
-		this.calendarTime = $('<div></div>').addClass('calendar-time').text(this.getNowTime(this.timeStyle,new Date()));
-		this.calendarDate = $('<div></div>').addClass('calendar-date').text(this.getNowDate(this.dateStyle,new Date()));
-		
-		//创建显示月日
-		this.calendarTitle = $('<div></div>').addClass('calendar-tit');
-		this.calendarTitleText = $('<span></span>').addClass('calendar-tit-txt').text(this.getNowDate(this.yearMonthStyle,new Date()));
-		this.calendarBottonLast = $('<a></a>').addClass('calendar-btn-last').text('上一个月');
-		this.calendarBottonNext = $('<a></a>').addClass('calendar-btn-next').text('下一个月');
-		this.calendarTitle.append(this.calendarTitleText).append(this.calendarBottonLast).append(this.calendarBottonNext);
-		this.calendarBody = this.foundCalendarBody(7, 7).addClass('calendar-body');
-		this.setCalenderBodyDay(this.showDateYear,this.showDateMonth);
-		
-		this.calendarObj.append(this.calendarTime).append(this.calendarDate).append(this.calendarTitle).append(this.calendarBody);
-		*/
 		this.calendarBody = this.foundCalendarBody(7, 7);
 		this.setCalenderBodyDay(this.showDateYear,this.showDateMonth);
 		
@@ -125,25 +103,6 @@ Calendar.prototype = {
 		dateStyle = dateStyle.replace(/W/, this.weekStyleArray[newTime.getDay()]);
 		return dateStyle;
 	},
-	/*
-	//获取现在时间
-	getNowTime:function(timeStyle,newTime){
-		timeStyle = timeStyle.replace(/HH/, newTime.getHours()>9?newTime.getHours().toString():'0'+newTime.getHours());
-		timeStyle = timeStyle.replace(/mm/, newTime.getMinutes()>9?newTime.getMinutes().toString():'0'+newTime.getMinutes());
-		timeStyle = timeStyle.replace(/ss/, newTime.getSeconds()>9?newTime.getSeconds().toString():'0'+newTime.getSeconds());
-		return timeStyle;
-	},
-	
-	
-	//重复显示最新时间
-	repeatShowNowTime:function(){	
-		var that =this;
-		that.calendarObj.find('.calendar-time').text(this.getNowTime(this.timeStyle,new Date())); 
-		setTimeout(function(){
-			that.repeatShowNowTime();
-		},1000); 
-	},*/
-	
 	getNowTimeHours:function(){
 		var nowDate = new Date;
 		var nowTimeHours = nowDate.getHours()>9?nowDate.getHours().toString():'0'+nowDate.getHours();
