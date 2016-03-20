@@ -1,6 +1,8 @@
 ---
 title: jQuery 全选全不选反选
 date: 2016-03-10 19:15:08
+tags: jquery
+categories: reprint
 ---
 ``` bash
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">

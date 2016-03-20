@@ -1,6 +1,8 @@
 ---
 title: 极简煮义
 date: 2016-03-10 22:10:20
+tags: html
+categories: works
 ---
 # [用更好的方式 享受料理](http://wusuobu.github.io/JJCook/demo/index.html)
 ---
